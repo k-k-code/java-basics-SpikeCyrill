@@ -119,9 +119,14 @@ public class Main {
 
     /* Укажите тип значения, которое будет возвращать метод*/
     private static byte getFirstPositiveIndex(int[] arrayOfValues) {
-        /* Укажите тип переменной */
+
         byte firstPositiveIndex = 0;
-        /* Используя цикл while найдите индекс первого положительного значения в массиве и сохраните в переменную firstPositiveIndex */
+
+        while(firstPositiveIndex < arrayOfValues.length
+                && arrayOfValues[firstPositiveIndex] <= 0) {
+            firstPositiveIndex++;
+        }
+
         return firstPositiveIndex;
     }
 
@@ -135,11 +140,15 @@ public class Main {
 
     /* Укажите тип значения, которое будет возвращать метод*/
     private static byte getLastPositiveIndex(int[] arrayOfValues) {
-        /*
-        Найдите последнее положительное значение в массиве.
-        Верните найденное значение используя ключевое слово return.
-         */
-        return 0;
+
+        byte lastPositiveIndex = (byte) (arrayOfValues.length - 1);
+
+        while(lastPositiveIndex >= 0
+                && arrayOfValues[lastPositiveIndex] <=0) {
+            lastPositiveIndex --;
+        }
+
+        return lastPositiveIndex;
     }
 
     /* Укажите тип значения, которое будет возвращать метод*/
